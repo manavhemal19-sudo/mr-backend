@@ -77,5 +77,7 @@ app.patch('/api/orders/:id', async (req, res) => {
   }
 });
 
+app.get("/admin", (req, res) => res.sendFile(__dirname + "/admin.html"));
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
